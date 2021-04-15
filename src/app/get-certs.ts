@@ -1,11 +1,12 @@
-import { CadesCertificate, Certificate } from "crypto-pro";
-import { CAPICOM_PROPID_KEY_PROV_INFO } from "crypto-pro/dist/constants";
-import { _extractMeaningfulErrorMessage } from "crypto-pro/dist/helpers/_extractMeaningfulErrorMessage";
+import { CadesCertificate, Certificate } from "crypto-pro/lib/api/certificate";
+import { CAPICOM_PROPID_KEY_PROV_INFO } from "crypto-pro/lib/constants";
 import { _afterPluginsLoaded } from "crypto-pro/lib/helpers/_afterPluginsLoaded";
+import { _extractCommonName } from "crypto-pro/lib/helpers/_extractCommonName";
+import { _extractMeaningfulErrorMessage } from "crypto-pro/lib/helpers/_extractMeaningfulErrorMessage";
 import {
-  _generateCadesFn,
   __cadesAsyncToken__,
-  __createCadesPluginObject__
+  __createCadesPluginObject__,
+  _generateCadesFn
 } from "crypto-pro/lib/helpers/_generateCadesFn";
 
 let certificatesCache: Certificate[];
